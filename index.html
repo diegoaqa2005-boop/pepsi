@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pepsi Arcade - Carrera Extrema</title>
+  <link rel="stylesheet" href="arcade.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="back">← Volver a Pepsi</a>
+    <div class="brand">PEPSI <span>ARCADE</span></div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">EL DESAFÍO COMIENZA</p>
+      <h1>¡Corre por tu Pepsi!</h1>
+      <p>Esquiva obstáculos, recoge latas y consigue la máxima puntuación.</p>
+    </section>
+
+    <section class="game-card">
+      <div class="stats">
+        <div>⭐ PUNTOS <strong id="score">0</strong></div>
+        <div>🥤 LATAS <strong id="cans">0</strong></div>
+        <div>🏆 RÉCORD <strong id="best">0</strong></div>
+      </div>
+
+      <div class="game-area">
+        <canvas id="game" width="900" height="480"></canvas>
+
+        <div class="overlay" id="overlay">
+          <div class="overlay-content">
+            <div class="big-icon">🥤</div>
+            <h2 id="overlay-title">¡Prepárate para correr!</h2>
+            <p id="overlay-text">Muévete entre carriles y recoge todas las latas que puedas.</p>
+            <button id="start-btn">INICIAR JUEGO</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="left-btn" aria-label="Mover a la izquierda">◀</button>
+        <button id="jump-btn">SALTAR ⬆</button>
+        <button id="right-btn" aria-label="Mover a la derecha">▶</button>
+      </div>
+
+      <p class="instructions">
+        Teclado: ← → para moverte · ESPACIO para saltar · ↓ para deslizarte
+      </p>
+    </section>
+
+    <section class="tips">
+      <h2>¿Cómo jugar?</h2>
+      <div class="tip-grid">
+        <article><span>↔️</span><h3>Muévete</h3><p>Cambia de carril para evitar los obstáculos.</p></article>
+        <article><span>⬆️</span><h3>Salta</h3><p>Salta sobre las barreras que encuentres.</p></article>
+        <article><span>🥤</span><h3>Recolecta</h3><p>Consigue latas para aumentar tu puntuación.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>PEPSI ARCADE · Juego web original de entretenimiento</footer>
+  <script src="arcade.js"></script>
+</body>
+</html>
